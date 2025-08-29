@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // The base URL of our backend server
-const API_URL = 'http://localhost:5001/api/auth';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api/auth';
 
 // Function to call the send-otp endpoint
 export const sendOtpApi = async (name: string, email: string) => {
