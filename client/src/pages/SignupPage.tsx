@@ -187,7 +187,7 @@ const SignupPage: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth();
   
-  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001';
 
   const handleSendOtp = async (e: React.FormEvent) => {
     e.preventDefault();
