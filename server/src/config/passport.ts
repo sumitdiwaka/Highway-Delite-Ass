@@ -9,7 +9,7 @@ passport.use(new GoogleStrategy({
     // Options for the Google strategy
     clientID: process.env.GOOGLE_CLIENT_ID!,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-    callbackURL: "/api/auth/google/callback"
+    callbackURL: "https://highway-delite-ass.onrender.com/api/auth/google/callback"
   },
   // This function is called when Google successfully authenticates the user
   async (accessToken: string, refreshToken: string, profile: Profile, done: VerifyCallback) => {
