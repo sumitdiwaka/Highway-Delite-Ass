@@ -1,3 +1,30 @@
+// {
+//   "compilerOptions": {
+//     "target": "ES2020",
+//     "useDefineForClassFields": true,
+//     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+//     "module": "ESNext",
+//     "skipLibCheck": true,
+
+//     /* Bundler mode */
+//     "moduleResolution": "bundler",
+//     "allowImportingTsExtensions": true,
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx", /* This is the key line that fixes the error */
+
+//     /* Linting */
+//     "strict": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "noFallthroughCasesInSwitch": true
+//   },
+//   "include": ["src"],
+//   // "references": [{ "path": "./tsconfig.node.json" }]
+// }
+
+
 {
   "compilerOptions": {
     "target": "ES2020",
@@ -6,13 +33,15 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    /* Add this line */
+    "jsx": "react-jsx",
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx", /* This is the key line that fixes the error */
 
     /* Linting */
     "strict": true,
@@ -20,6 +49,5 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
-  // "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["vite.config.ts"]
 }
