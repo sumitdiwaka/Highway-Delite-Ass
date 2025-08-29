@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 import User, { IUser } from '../models/User';
 
-// We can now simplify this back to its original clean version
+
 export interface AuthRequest extends Request {
   user?: IUser;
 }
@@ -22,7 +22,7 @@ export const protect = async (req: AuthRequest, res: Response, next: NextFunctio
         return res.status(401).json({ message: 'Not authorized, user not found' });
       }
 
-      // This assignment will now work without error
+      
       req.user = foundUser;
 
       next();

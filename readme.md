@@ -1,28 +1,20 @@
 MindScribe - A Modern Full-Stack Note-Taking Application
 MindScribe is a sleek, secure, and modern full-stack note-taking application designed to provide a seamless and visually appealing user experience. It features a secure authentication system with both passwordless OTP and Google OAuth, allowing users to quickly sign up and manage their notes. The application boasts a stunning dark mode UI with glassmorphism effects and subtle animations.
 
-✨ Features
-Secure Authentication: Users can sign up and log in via two methods:
+Live Application URL: https://highway-delite-ass.vercel.app/
 
-Passwordless OTP: A one-time password sent to the user's email.
+✨Features
+Dual Authentication System: Secure user sign-up and login using either an Email & OTP flow or Google OAuth 2.0.
 
-Google OAuth 2.0: Secure and convenient one-click sign-in with a Google account.
+JWT-Powered Security: User sessions and API routes are protected using JSON Web Tokens, ensuring that users can only access their own notes.
 
-JWT-Powered Authorization: User sessions are managed using JSON Web Tokens, ensuring that all API requests for creating or deleting notes are secure and authorized.
+Full CRUD Functionality: Users can Create, Read, and Delete their notes seamlessly after logging in.
 
-CRUD Functionality: Authenticated users can easily Create and Delete their notes.
+Stunning, Modern UI/UX: A beautifully designed dark mode interface with glassmorphism effects and subtle animations for a premium user experience.
 
-Stunning & Creative UI:
+Fully Responsive Design: The application is optimized for a great user experience on all devices, from desktops to mobile phones.
 
-A beautiful dark mode theme with elegant glassmorphism effects.
-
-Dynamic background gradient animations for a visually rich experience.
-
-Subtle hover effects and loading animations.
-
-Responsive Design: The application is fully responsive and provides an optimal user experience on desktops, tablets, and mobile devices.
-
-Error Handling: Displays relevant and user-friendly error messages for invalid inputs, API failures, or incorrect OTPs.
+Cloud Deployed: The full-stack application is deployed to the cloud, with the frontend hosted on Vercel and the backend on Render.
 
 🛠️ Technology Stack
 This project is built using a modern MERN-style stack with TypeScript for robust type safety.
@@ -132,58 +124,3 @@ npm run dev
 
 Open http://localhost:5173 in your browser to see the application.
 
-📝 API Endpoints
-The following are the main API routes created for this project:
-
-Method
-
-Endpoint
-
-Description
-
-POST
-
-/api/auth/send-otp
-
-Sends a 6-digit OTP to the user's email.
-
-POST
-
-/api/auth/verify-otp
-
-Verifies the OTP and returns a JWT.
-
-GET
-
-/api/auth/google
-
-Initiates the Google OAuth 2.0 login flow.
-
-GET
-
-/api/auth/google/callback
-
-Callback URL for Google to redirect to.
-
-GET
-
-/api/notes
-
-Fetches all notes for the authenticated user.
-
-POST
-
-/api/notes
-
-Creates a new note for the authenticated user.
-
-DELETE
-
-/api/notes/:id
-
-Deletes a specific note by its ID.
-
-👤 Author
-Sumit Rathore
-
-GitHub: @your-username

@@ -1,4 +1,3 @@
-// src/components/GoogleAuthCallback.tsx
 import React, { useEffect } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext'; // Ensure this path is correct
@@ -25,7 +24,7 @@ const GoogleAuthCallback: React.FC = () => {
     if (token) {
       try {
         const decodedUser = jwtDecode<DecodedToken>(token);
-        // Use your existing login function from AuthContext
+        
         login(decodedUser, token);
         navigate('/'); // Redirect to the dashboard
       } catch (error) {
